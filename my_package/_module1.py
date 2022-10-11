@@ -5,7 +5,8 @@ def _privatefunction(variable2):
     some change
     other change
     even more
-    
+    moremore
+
     Parameters
     ----------
 
