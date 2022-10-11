@@ -56,4 +56,4 @@ jobs:
         bumpversion ${{github.event.inputs.version}}  
 
     - name: Push latest version
-      run: git push origin main --follow-tags
+      run: git push origin main --tags
