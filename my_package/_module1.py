@@ -3,7 +3,7 @@ def _privatefunction(variable2):
     This is a private function
 
     some change
-    
+    other change
 
     Parameters
     ----------
