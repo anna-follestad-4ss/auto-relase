@@ -47,8 +47,5 @@ jobs:
         git config user.name 'anna-follestad-4ss'
         git config user.email 'anna.fehn.follestad@4subsea.com'
 
-    - name: bump version
-      run: npm version ${{ github.event.inputs.version }}
-
     - name: Push latest version
       run: git push origin main --follow-tags
