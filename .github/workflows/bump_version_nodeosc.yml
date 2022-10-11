@@ -35,7 +35,7 @@ jobs:
     - name: Check out source
       uses: actions/checkout@v2
       with:
-        ssh-key: ${{ secrets.access_token}}
+        ssh-key: ${{ secrets.ACCESS_TOKEN}}
     
     - name: Setup up Python v3.9
       uses: actions/setup-python@v4.2.0
