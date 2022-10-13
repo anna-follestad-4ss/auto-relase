@@ -11,6 +11,11 @@ jobs:
   create-release-notes:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out source
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.access_token }}
+        
     - uses: actions/checkout@master
     - name: Create Release Notes
       uses: docker://decathlon/release-notes-generator-action:2.0.1
