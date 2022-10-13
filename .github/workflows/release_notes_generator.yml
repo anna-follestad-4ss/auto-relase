@@ -20,3 +20,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.access_token }}
         OUTPUT_FOLDER: temp_release_notes
         USE_MILESTONE_TITLE: "false"
+        milestoneID: '2'
