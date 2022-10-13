@@ -1,19 +1,11 @@
 on:
-  milestone:
-    types: [closed]
   workflow_dispatch:
-    inputs:
-      milestoneId:
-        description: 'Milestone ID'     
-        required: true
-        default: '1'
+
 name: Milestone Closure
 jobs:
   release-notes:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug Action
-        uses: hmarr/debug-action@v1.0.0
       - uses: actions/checkout@master
       - name: Create Release Notes
         uses: docker://decathlon/release-notes-generator-action:2.0.1
@@ -22,3 +14,4 @@ jobs:
           OUTPUT_FOLDER: temp_release_notes
           #USE_MILESTONE_TITLE: "true"
           FILENAME: "my_custom_file"
+          milestoneId: '5'
