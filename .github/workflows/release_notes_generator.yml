@@ -1,14 +1,22 @@
 on:
+  milestone:
+    types: [closed]
   workflow_dispatch:
-
-name: Milestone Closure
+    inputs:
+      milestoneId:
+        description: 'Milestone ID'     
+        required: true
+        default: '1'
+        
+name: Milestone Closure - generate notes
 jobs:
   release-notes:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Create Release Notes
-        uses: docker://decathlon/release-notes-generator-action:2.0.1
+      - name: Release notes generator
+        uses: Decathlon/release-notes-generator-action@v3.1.6
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OUTPUT_FOLDER: temp_release_notes
