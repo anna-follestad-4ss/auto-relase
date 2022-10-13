@@ -1,6 +1,4 @@
 on:
-  milestone:
-    types: [closed]
   workflow_dispatch:
     inputs:
       milestoneId:
