@@ -28,6 +28,12 @@ jobs:
       #  run: |
       #    x=`echo "Name: John"; cat mydirname/my_file.txt`
       #    echo "$x" > mydirname/my_file.txt
+      
+      - name: Setup Git
+        run: |
+          git config user.name 'anna-follestad-4ss'
+          git config user.email 'anna.fehn.follestad@4subsea.com'
+        
       - name: Push latest version
         run: |
           git add mydirname/randomtext.txt
