@@ -22,3 +22,6 @@ jobs:
           OUTPUT_FOLDER: min_mappe
           FILENAME: "my_custom_file"
           milestoneId: '5'
+          
+      - name: Push latest version
+        run: git push origin main
