@@ -72,8 +72,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
       - name: get release notes
-        run: gh api -H"Accept: application/vnd.github+json" --method GET /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} ' > release_notes.json
-        
+        run: |
+          gh api -H"Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} '        
+     
       - name: Push latest version
         run: git push origin main --tags
           
