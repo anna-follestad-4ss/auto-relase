@@ -11,7 +11,7 @@ on:
 name: Milestone Closure - generate notes
 jobs:
   release-notes:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
       - name: Release notes generator
