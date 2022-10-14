@@ -29,5 +29,8 @@ jobs:
       #    x=`echo "Name: John"; cat mydirname/my_file.txt`
       #    echo "$x" > mydirname/my_file.txt
       - name: Push latest version
-        run: git push origin main
+        run: |
+        git add mydirname/randomtext.txt
+        git commit -m "added some file"
+        git push origin main
 
