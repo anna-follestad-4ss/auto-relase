@@ -19,9 +19,18 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUTPUT_FOLDER: min_mappe
-          FILENAME: "my_custom_file"
+          OUTPUT_FOLDER: temp_release_notes
+          FILENAME: "my_custom_file.txt"
           milestoneId: '5'
           
+
+      - name: Setup Git
+        run: |
+          git config user.name 'anna-follestad-4ss'
+          git config user.email 'anna.fehn.follestad@4subsea.com'
+        
       - name: Push latest version
-        run: git push origin main
+        run: |
+          git add temp_release_notes/my_custom_file.txt
+          git commit -m "added some release notes file"
+          git push origin main
