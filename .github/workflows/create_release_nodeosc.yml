@@ -4,7 +4,7 @@ on:
     tags:
       - 'v*'
       
-name: Create Release
+name: Create Release and save notes to file
 
 jobs:
   publish:
@@ -25,4 +25,27 @@ jobs:
           gh release create ${{ github.ref }} --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: get release notes
+        run: |
+          gh api -H"Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} '        
+     
+     
+     
+      #- name: Setup Git
+      #  run: |
+      #    git config user.name 'anna-follestad-4ss'
+      #    git config user.email 'anna.fehn.follestad@4subsea.com'
+      #  
+      #- name: Push latest version
+      #  run: |
+      #    git add mydirname/randomtext.txt
+      #    git commit -m "added some file"
+      #    git push origin main
+      #    
+      #    
+      #- name: Push latest version
+      #  run: git push origin main --tags
+          
+          
   
