@@ -18,9 +18,9 @@ jobs:
       
       - name: get the release
         run: |
-          gh api /repos/anna-follestad-4ss/auto-release/releases/latest --jq '.[].body'
-          gh api /repos/anna-follestad-4ss/auto-release/releases/latest --jq '.[].id'
-          gh api /repos/anna-follestad-4ss/auto-release/releases/latest --jq '.[].assets_url'
+          gh api /repos/anna-follestad-4ss/auto-release/releases --jq '.[].body'
+          gh api /repos/anna-follestad-4ss/auto-release/releases --jq '.[].id'
+          gh api /repos/anna-follestad-4ss/auto-release/releases/v0.0.13 --jq '.[].id'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
