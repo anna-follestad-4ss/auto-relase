@@ -19,7 +19,6 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUTPUT_FOLDER: "C:\\projects\\auto-release\\"
-          #USE_MILESTONE_TITLE: "true"
+          OUTPUT_FOLDER: min_mappe
           FILENAME: "my_custom_file"
           milestoneId: '5'
