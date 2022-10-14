@@ -29,7 +29,8 @@ jobs:
       - name: get release notes
         run: |
           gh api -H"Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} '        
-     
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
      
       #- name: Setup Git
