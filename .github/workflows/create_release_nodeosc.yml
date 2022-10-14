@@ -23,7 +23,8 @@ jobs:
       - name: Create Release
         run: |
           gh release create ${{ github.ref }} --generate-notes
-          gh api -H"Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} '
+          echo "hello!"
+          gh api /repos/anna-follestad-4ss/auto-release/releases/tags/${{ github.ref }} -q '. | {body} '
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
