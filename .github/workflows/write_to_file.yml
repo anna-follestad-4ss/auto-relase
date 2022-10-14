@@ -19,6 +19,8 @@ jobs:
       - name: create dir
         run: |
           mkdir mydirname
+          chdir mydirname
+          echo "this is some text" > randomtext.txt
 
 
       # Runs a set of commands using the runners shell
