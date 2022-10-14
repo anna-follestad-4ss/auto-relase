@@ -20,7 +20,8 @@ jobs:
         run: |
           gh api /repos/anna-follestad-4ss/auto-release/releases --jq '.[].body'
           gh api /repos/anna-follestad-4ss/auto-release/releases --jq '.[].id'
-          gh api /repos/anna-follestad-4ss/auto-release/releases/v0.0.13 --jq '.[].id'
+          echo "hello,world!"
+          gh api /repos/anna-follestad-4ss/auto-release/releases/79526239 --jq '.[].body'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
