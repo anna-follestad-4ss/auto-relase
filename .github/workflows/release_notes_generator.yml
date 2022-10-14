@@ -20,7 +20,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OUTPUT_FOLDER: temp_release_notes
-          FILENAME: "my_custom_file.txt"
+          FILENAME: "my_custom_file"
           milestoneId: '5'
           
 
@@ -31,6 +31,6 @@ jobs:
         
       - name: Push latest version
         run: |
-          git add temp_release_notes/my_custom_file.txt
+          git add temp_release_notes/my_custom_file.md
           git commit -m "added some release notes file"
           git push origin main
