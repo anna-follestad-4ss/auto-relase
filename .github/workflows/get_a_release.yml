@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Write to file
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+    
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:           
+  Get release:   
+    runs-on: windows-latest 
+    
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v3
+      
+      - name: get the release
+        run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            /repos/anna-follestad-4ss/auto-release/releases/tags/v0.0.13
+          
+          
+     
+
+
