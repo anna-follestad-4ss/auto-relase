@@ -23,7 +23,6 @@ jobs:
           #echo "hello,world!"
           #gh api /repos/anna-follestad-4ss/auto-release/releases/tags/v0.0.13 --jq '.[].body'
           gh api \
-            -H "Accept: application/vnd.github+json" \
             /repos/anna-follestad-4ss/auto-release/releases/tags/v0.0.13
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
