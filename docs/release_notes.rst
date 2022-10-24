@@ -1,1 +1,1 @@
-Her er forrige release:
+New text
