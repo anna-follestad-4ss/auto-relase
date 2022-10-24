@@ -49,7 +49,7 @@ jobs:
           cd docs
           sed -i "3 r \n " release_notes.rst
           sed -i '3 r new_notes.txt' release_notes.rst
-          sed -i '3 r What is new in version X.Y.Z ' release_notes.rst
+          sed -i '3 r "What is new in version X.Y.Z" ' release_notes.rst
   
       - name: Setup Git
         run: |
