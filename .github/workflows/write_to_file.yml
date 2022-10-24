@@ -9,42 +9,48 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:           
-  write:   
-    runs-on: windows-latest 
+  #write:   
+  #  runs-on: windows-latest 
+  #  
+  #  steps:
+  #    - name: Check out source
+  #      uses: actions/checkout@v3
+#
+ #     - name: third text adder
+  #      id: add_more_text
+  #      run: |
+  #        chdir docs
+  #        echo "my new release notes v2" > new_notes.txt
+  #        type release_notes.rst >> new_notes.txt
+  #        type new_notes.txt > release_notes.rst
+       
+  #    - name: Setup Git
+  #      run: |
+  #        git config user.name 'anna-follestad-4ss'
+  #        git config user.email 'anna.fehn.follestad@4subsea.com'
+  #      
+  #    - name: Push latest version
+  #      run: |
+  #        git add docs/release_notes.rst
+  #        git commit -m "added some text to release notes"
+  #        git push origin main
+          
+  write-ubuntu:
+    runs-on: ubuntu-latest
     
     steps:
       - name: Check out source
         uses: actions/checkout@v3
-
-      - name: third text adder
-        id: add_more_text
+        with:
+          ref: main
+          
+      - name: ubuntu text adder
         run: |
-          chdir docs
-          echo "my new release notes v2" > new_notes.txt
-          type release_notes.rst >> new_notes.txt
-          type new_notes.txt > release_notes.rst
-          
-          
-   
-
-      #- name: Get Release
-      #  run: |
-      #    gh api -H "Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/latest -q ".body"
-      #    echo "hello again!"
-      #    echo ""
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-
-      #- name: fourth text adder
-      #  id: add_variable_text
-      #  run: |
-      #    chdir docs
-      #    cat release_notes.rst
-      #    echo "pause"
-      #    sed -i "1i "+ "mer tekst" release_notes.rst
-          
-          
+          cd docs
+          sed -i '3 r \n ' release_notes.rst
+          sed -i '3 r new_notes.txt' release_notes.rst
+          sed -i '3 r What's new in version X.Y.Z' release_notes.rst
+  
       - name: Setup Git
         run: |
           git config user.name 'anna-follestad-4ss'
