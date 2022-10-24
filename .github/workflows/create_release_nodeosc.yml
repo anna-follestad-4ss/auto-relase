@@ -34,6 +34,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+      - name: Add most recent release notes
+        run: |
+          chdir docs
+          type release_notes.rst >> new_notes.txt
+          type new_notes.txt > release_notes.rst
+       
+        
+          
       - name: Setup Git
         run: |
           git config user.name 'anna-follestad-4ss'
