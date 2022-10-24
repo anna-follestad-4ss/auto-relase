@@ -31,6 +31,17 @@ jobs:
           echo "hello again!"
           echo ""
           
+      - name: Read a file
+        run: |
+          cat samplefile.txt
+          x = `echo "Name: John" cat samplefile.txt`
+          cat samplefile.txt 
+          echo ""
+          echo ""
+          
+          x=`echo "New text"; cat filename`
+          echo "$x" > filename
+          
           
           # gh repo view anna-follestad-4ss/auto-release
           # gh api /repos/anna-follestad-4ss/auto-release/releases
