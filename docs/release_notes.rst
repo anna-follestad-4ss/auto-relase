@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+<!-- Release notes generated using configuration in .github/release.yml at v0.1.39 -->
+
+
+
+**Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.38...v0.1.39
 <!-- Release notes generated using configuration in .github/release.yml at v0.1.37 -->
 
 ## What's Changed
