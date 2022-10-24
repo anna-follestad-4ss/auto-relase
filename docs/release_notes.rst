@@ -1,6 +1,12 @@
 Release Notes
 =============
+What is new in version refs/tags/v0.1.40 
 What is new in version X.Y.Z 
+<!-- Release notes generated using configuration in .github/release.yml at v0.1.40 -->
+
+
+
+**Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.39...v0.1.40
 "What is new in version X.Y.Z" 
 <!-- Release notes generated using configuration in .github/release.yml at v0.1.39 -->
 
