@@ -1,8 +1,11 @@
+# This is a backup of the one that actually works, just switch the trigger to on push tags
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
+    
+#  push:
+#    tags:
+#      - 'v*'
       
 name: Create Release and save notes to file
 
