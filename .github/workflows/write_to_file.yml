@@ -21,13 +21,12 @@ jobs:
           mkdir mydirname
           chdir mydirname
           echo "this is some text" > randomtext.txt
-
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script
-      #  run: |
-      #    x=`echo "Name: John"; cat mydirname/my_file.txt`
-      #    echo "$x" > mydirname/my_file.txt
+          
+      - name: add some text
+        run: |
+          chdir docs
+          x=`echo -n "New Text"; cat release_notes.rst`
+          echo "$x" > release_notes.rst
       
       - name: Setup Git
         run: |
@@ -36,7 +35,7 @@ jobs:
         
       - name: Push latest version
         run: |
-          git add mydirname/randomtext.txt
-          git commit -m "added some file"
+          git add docs/release_notes.rst
+          git commit -m "added some text to release notes"
           git push origin main
 
