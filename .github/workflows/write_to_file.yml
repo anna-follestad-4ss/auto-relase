@@ -10,19 +10,19 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:           
   write:   
-    runs-on: windows-latest 
+    runs-on: ubuntu-latest 
     
     steps:
       - name: Check out source
         uses: actions/checkout@v3
 
-      #- name: third text adder
-      #  id: add_more_text
-      #  run: |
-      #    chdir docs
-      #    cat release_notes.rst
-      #    echo "pause"
-      #    sed -i "1i Introduction " release_notes.rst
+      - name: third text adder
+        id: add_more_text
+        run: |
+          chdir docs
+          cat release_notes.rst
+          echo "pause"
+          sed -i "1i Introduction " release_notes.rst
    
 
       #- name: Get Release
@@ -34,13 +34,13 @@ jobs:
       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
 
-      - name: fourth text adder
-        id: add_variable_text
-        run: |
-          chdir docs
-          cat release_notes.rst
-          echo "pause"
-          sed -i "1i "+ "mer tekst" release_notes.rst
+      #- name: fourth text adder
+      #  id: add_variable_text
+      #  run: |
+      #    chdir docs
+      #    cat release_notes.rst
+      #    echo "pause"
+      #    sed -i "1i "+ "mer tekst" release_notes.rst
           
           
       - name: Setup Git
