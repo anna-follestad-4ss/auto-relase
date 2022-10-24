@@ -1,4 +1,5 @@
 my new release notes v2
+my new release notes v2
 Introduction 
 Introduction
 SELECTED_COLOR=cho 'Name: John'; cat samplefile.txt" >>
