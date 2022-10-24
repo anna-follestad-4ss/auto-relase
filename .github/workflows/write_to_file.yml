@@ -21,8 +21,8 @@ jobs:
           chdir docs
           cat release_notes.rst
           echo "pause"
-          x=`echo -n "New Text"; cat release_notes.rst`
-          echo "$x" > release_notes.rst
+          # x=`echo -n "New Text"; cat release_notes.rst`
+          echo "New text" > release_notes.rst
       
       - name: Setup Git
         run: |
