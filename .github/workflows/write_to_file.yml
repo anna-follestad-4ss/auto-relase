@@ -23,8 +23,8 @@ jobs:
           cat release_notes.rst
           echo "pause"
           echo "SELECTED_COLOR=`echo "Name: John"; cat samplefile.txt`" >>$GITHUB_OUTPUT
-
-          echo "the selected color is ${{steps.add_text.SELECTED_COLOR}}"
+          echo "pause2
+          echo "the selected color is ${{steps.add_text.SELECTED_COLOR}} "
 
           
       - name: Setup Git
