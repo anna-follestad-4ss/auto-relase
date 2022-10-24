@@ -34,30 +34,57 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          
-         
-  add-release-notes:
-    name: Add Release Notes
-    runs-on: windows-latest
-    needs: create-github-release
+  
+  write:   
+    runs-on: windows-latest 
+    
     steps:
-      - name: Add most recent release notes
+      - name: Check out source
+        uses: actions/checkout@v3
+
+      - name: third text adder
+        id: add_more_text
         run: |
-          dir
           chdir docs
+          echo "my new release notes v2" > new_notes.txt
           type release_notes.rst >> new_notes.txt
           type new_notes.txt > release_notes.rst
-          
+  
+  
       - name: Setup Git
         run: |
           git config user.name 'anna-follestad-4ss'
           git config user.email 'anna.fehn.follestad@4subsea.com'
- 
+        
       - name: Push latest version
         run: |
-          git init
-          git add .
-          git commit -m "initial commit"
+          git add docs/release_notes.rst
+          git commit -m "added some text to release notes"
           git push origin main
+          
+  #add-release-notes:
+  #  name: Add Release Notes
+  #  runs-on: windows-latest
+  #  needs: create-github-release
+  #  steps:
+  #    - name: Add most recent release notes
+  #      run: |
+  #        dir
+  #        chdir docs
+  #        type release_notes.rst >> new_notes.txt
+  #        type new_notes.txt > release_notes.rst
+  #        
+  #    - name: Setup Git
+  #      run: |
+  #        git config user.name 'anna-follestad-4ss'
+  #        git config user.email 'anna.fehn.follestad@4subsea.com'
+  # 
+  #    - name: Push latest version
+  #      run: |
+  #        git init
+  #        git add .
+  #        git commit -m "initial commit"
+  #        git push origin main
       
           
 
