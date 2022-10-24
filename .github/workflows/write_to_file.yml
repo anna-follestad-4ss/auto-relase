@@ -34,6 +34,14 @@ jobs:
           echo "pause"
           sed -i "1i Introduction " release_notes.rst
           
+      - name: fourth text adder
+        id: add_variable_text
+        run: |
+          chdir docs
+          cat release_notes.rst
+          echo "pause"
+          sed -i "1i ${{steps.add_text.SELECTED_COLOR}} " release_notes.rst
+          
           
       - name: Setup Git
         run: |
