@@ -27,11 +27,10 @@ jobs:
           gh api -H "Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/latest 
           echo "hello again!"
           echo ""
-          gh api -H "Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/latest > latest_release.json
+          gh api -H "Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/latest -q ".body"
           echo "hello again!"
           echo ""
           
-          jq '.[] | {title: .title, authorID: .user.id}' latest_release.json
           
           # gh repo view anna-follestad-4ss/auto-release
           # gh api /repos/anna-follestad-4ss/auto-release/releases
