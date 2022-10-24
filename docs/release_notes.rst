@@ -1,3 +1,4 @@
+**Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.32...v0.1.33
 **Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.30...v0.1.31
 my new release notes v2
 my new release notes v2
