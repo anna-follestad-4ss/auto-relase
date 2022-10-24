@@ -35,7 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          
          
- add-release-notes:
+  add-release-notes:
     name: Add Release Notes
     runs-on: windows-latest
     needs: create-github-release
