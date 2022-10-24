@@ -43,7 +43,7 @@ jobs:
         run: |
           git add docs/new_notes.txt
           git commit -m "initial commit"
-          git push origin main --tags
+          git push origin main
       
           
 
