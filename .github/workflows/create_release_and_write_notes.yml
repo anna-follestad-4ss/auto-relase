@@ -60,13 +60,17 @@ jobs:
         with:
           ref: main
           
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+          
       - name: ubuntu text adder
         run: |
           cd docs
           sed -i "3 r \n " release_notes.rst
           sed -i '3 r new_notes.txt' release_notes.rst
-          sed -i "3 r \n\n " release_notes.rst
-          sed -i '3 i What is new in version ${{ github.ref_name }} ' release_notes.rst
+          sed -i "3 i \n\n " release_notes.rst
+          sed -i '3 i What is new in version ${{ github.ref_name }} (${{ steps.date.outputs.date }})' release_notes.rst
   
       - name: Setup Git
         run: |
