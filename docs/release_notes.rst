@@ -5,3 +5,4 @@ echo
 pause2
 echo 
 
+my new release notes
