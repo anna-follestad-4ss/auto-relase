@@ -13,17 +13,28 @@ jobs:
     runs-on: windows-latest 
     
     steps:
-      #- name: Check out source
-      #  uses: actions/checkout@v3
+      - name: Check out source
+        uses: actions/checkout@v3
       
-      - name: add some text
+      - name: first text adder
         run: |
           chdir docs
           cat release_notes.rst
           echo "pause"
-          x="echo 'even More Text'; cat release_notes.rst"
-          echo "$x" > release_notes.rst
+          x="echo 'even More Text'"
+          # echo "$x" > release_notes.rst
       
+      - name: second text adder
+        id: add_text
+        run: |
+          chdir docs
+          cat release_notes.rst
+          echo "pause"
+          echo "SELECTED_COLOR=`echo "Name: John"; cat samplefile.txt`" >>$GITHUB_OUTPUT
+
+          echo "the selected color is ${{steps.add_text.SELECTED_COLOR}}"
+
+          
       - name: Setup Git
         run: |
           git config user.name 'anna-follestad-4ss'
