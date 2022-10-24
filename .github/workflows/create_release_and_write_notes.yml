@@ -64,12 +64,13 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v3
+        with:
+          ref: main
 
       - name: third text adder
         id: add_more_text
         run: |
           chdir docs
-          echo "my new release notes v2" > new_notes.txt
           type release_notes.rst >> new_notes.txt
           type new_notes.txt > release_notes.rst
   
