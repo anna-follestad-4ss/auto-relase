@@ -32,7 +32,7 @@ jobs:
           chdir docs
           cat release_notes.rst
           echo "pause"
-          sed -i "1i Introduction" release_notes.rst
+          sed -i "1i Introduction " release_notes.rst
           
           
       - name: Setup Git
