@@ -1,4 +1,5 @@
 Release Notes
 =============
 
+**Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.34...v0.1.35
 TBA
