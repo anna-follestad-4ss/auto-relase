@@ -16,14 +16,6 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v3
       
-      - name: first text adder
-        run: |
-          chdir docs
-          cat release_notes.rst
-          echo "pause"
-          x="echo 'even More Text'"
-          # echo "$x" > release_notes.rst
-      
       - name: second text adder
         id: add_text
         run: |
