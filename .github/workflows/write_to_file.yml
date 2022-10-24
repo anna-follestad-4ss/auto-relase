@@ -19,6 +19,8 @@ jobs:
       - name: add some text
         run: |
           chdir docs
+          cat release_notes.rst
+          echo "pause"
           x=`echo -n "New Text"; cat release_notes.rst`
           echo "$x" > release_notes.rst
       
