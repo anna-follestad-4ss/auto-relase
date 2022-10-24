@@ -34,7 +34,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          
-  
+      - name: Setup Git
+        run: |
+          git config user.name 'anna-follestad-4ss'
+          git config user.email 'anna.fehn.follestad@4subsea.com'
+        
+      - name: Push latest version
+        run: |
+          git add .
+          git commit -m "added a new release and made some notes"
+          git push origin main
+ 
+ 
   write:   
     runs-on: windows-latest 
     
