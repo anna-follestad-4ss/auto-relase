@@ -15,32 +15,32 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v3
-      
-      - name: second text adder
-        id: add_text
-        run: |
-          chdir docs
-          cat release_notes.rst
-          echo "pause"
-          echo "SELECTED_COLOR=`echo 'Name: John'; cat samplefile.txt`" >>$GITHUB_OUTPUT
-          echo "pause2"
-          echo "the selected color is ${{steps.add_text.SELECTED_COLOR}} ""
-    
-      - name: third text adder
-        id: add_more_text
-        run: |
-          chdir docs
-          cat release_notes.rst
-          echo "pause"
-          sed -i "1i Introduction " release_notes.rst
+
+      #- name: third text adder
+      #  id: add_more_text
+      #  run: |
+      #    chdir docs
+      #    cat release_notes.rst
+      #    echo "pause"
+      #    sed -i "1i Introduction " release_notes.rst
+   
+
+      #- name: Get Release
+      #  run: |
+      #    gh api -H "Accept: application/vnd.github+json" /repos/anna-follestad-4ss/auto-release/releases/latest -q ".body"
+      #    echo "hello again!"
+      #    echo ""
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+
       - name: fourth text adder
         id: add_variable_text
         run: |
           chdir docs
           cat release_notes.rst
           echo "pause"
-          sed -i "1i ${{steps.add_text.SELECTED_COLOR}} " release_notes.rst
+          sed -i "1i "+ "mer tekst" release_notes.rst
           
           
       - name: Setup Git
