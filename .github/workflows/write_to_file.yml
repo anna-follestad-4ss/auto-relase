@@ -32,10 +32,7 @@ jobs:
           chdir docs
           cat release_notes.rst
           echo "pause"
-          echo "SELECTED_COLOR=`echo 'Name: John'; cat samplefile.txt`" >>$GITHUB_OUTPUT
-          echo "pause2"
-          echo "${{steps.add_more_text.SELECTED_COLOR}} "" > release_notes.rst
-          echo "sucecss!"
+          sed -i "1i Introduction" release_notes.rst
           
           
       - name: Setup Git
