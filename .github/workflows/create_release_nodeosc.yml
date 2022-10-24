@@ -40,7 +40,9 @@ jobs:
           git config user.email 'anna.fehn.follestad@4subsea.com'
  
       - name: Push latest version
-        run: git push origin main --tags
+        run: |
+          git commit -m "initial commit"
+          git push origin main --tags
       
           
 
