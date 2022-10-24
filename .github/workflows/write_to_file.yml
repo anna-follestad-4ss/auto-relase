@@ -25,7 +25,18 @@ jobs:
           echo "SELECTED_COLOR=`echo 'Name: John'; cat samplefile.txt`" >>$GITHUB_OUTPUT
           echo "pause2"
           echo "the selected color is ${{steps.add_text.SELECTED_COLOR}} ""
-
+    
+      - name: third text adder
+        id: add_more_text
+        run: |
+          chdir docs
+          cat release_notes.rst
+          echo "pause"
+          echo "SELECTED_COLOR=`echo 'Name: John'; cat samplefile.txt`" >>$GITHUB_OUTPUT
+          echo "pause2"
+          echo "${{steps.add_more_text.SELECTED_COLOR}} "" > release_notes.rst
+          echo "sucecss!"
+          
           
       - name: Setup Git
         run: |
