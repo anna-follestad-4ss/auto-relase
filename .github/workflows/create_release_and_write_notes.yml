@@ -60,6 +60,7 @@ jobs:
  
   write:   
     runs-on: windows-latest 
+    needs: get-release-notes
     
     steps:
       - name: Check out source
