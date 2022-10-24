@@ -22,7 +22,7 @@ jobs:
           cat release_notes.rst
           echo "pause"
           # x=`echo -n "New Text"; cat release_notes.rst`
-          echo "New text" > release_notes.rst
+          echo -n "Newer text" > release_notes.rst
       
       - name: Setup Git
         run: |
