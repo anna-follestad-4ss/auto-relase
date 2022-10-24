@@ -16,12 +16,6 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v3
       
-      - name: create dir
-        run: |
-          mkdir mydirname
-          chdir mydirname
-          echo "this is some text" > randomtext.txt
-          
       - name: add some text
         run: |
           chdir docs
