@@ -25,7 +25,6 @@ jobs:
           gh release create ${{ github.ref }} --generate-notes
           echo "hello!"
           gh repo view anna-follestad-4ss/auto-release
-          gh repo sync --branch main
           gh api /repos/anna-follestad-4ss/auto-release/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
