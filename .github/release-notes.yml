@@ -1,7 +1,14 @@
 changelog:
-  sections:
-  - title: "Enhancements"
-    labels: ["new"]
-  - title: "Bugs"
-    labels: ["fix"]
-  
+  categories:
+  - title: Breaking Changes
+    labels:
+    - breaking-change
+  - title: Features 
+    labels:
+    - feature
+  - title: Bug fixes 
+    labels:
+    - bug
+  - title: Other Changes
+    labels:
+       - "*"
