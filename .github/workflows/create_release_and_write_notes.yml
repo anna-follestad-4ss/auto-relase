@@ -66,7 +66,7 @@ jobs:
           sed -i "3 r \n " release_notes.rst
           sed -i '3 r new_notes.txt' release_notes.rst
           sed -i "3 r \n " release_notes.rst
-          sed -i '3 i What is new in version ${{ github.ref }} ' release_notes.rst
+          sed -i '3 i What is new in version ${{ github.action_ref }} ' release_notes.rst
   
       - name: Setup Git
         run: |
