@@ -42,6 +42,7 @@ jobs:
     steps:
       - name: Add most recent release notes
         run: |
+          dir
           chdir docs
           type release_notes.rst >> new_notes.txt
           type new_notes.txt > release_notes.rst
