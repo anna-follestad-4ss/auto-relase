@@ -47,11 +47,11 @@ jobs:
       - name: ubuntu text adder
         run: |
           cd docs
-          sed -i "4 i \ " release_notes.rst
+          # sed -i "4 i \ " release_notes.rst
           sed -i '4 r new_notes.txt' release_notes.rst
-          sed -i "3 i \ " release_notes.rst
-          sed -i "3 i ------------------------------------------------" release_notes.rst
-          sed -i '3 i What is new in version X.Y.Z og Dato 1 ' release_notes.rst
+          #sed -i "3 i \ " release_notes.rst
+          #sed -i "3 i ------------------------------------------------" release_notes.rst
+          #sed -i '3 i What is new in version X.Y.Z og Dato 1 ' release_notes.rst
   
   
       - name: Setup Git
