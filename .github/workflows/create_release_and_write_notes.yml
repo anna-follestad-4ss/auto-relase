@@ -67,11 +67,13 @@ jobs:
       - name: ubuntu text adder
         run: |
           cd docs
-          sed -i "3 i \n " release_notes.rst
+          sed -i "3 i \" release_notes.rst
+          sed -i "3 i \" release_notes.rst
           sed -i '3 r new_notes.txt' release_notes.rst
-          sed -i "3 i \n" release_notes.rst
+          sed -i "3 i \" release_notes.rst
           sed -i "3 i ------------------------------------------------" release_notes.rst
           sed -i '3 i What is new in version ${{ github.ref_name }} (${{ steps.date.outputs.date }})' release_notes.rst
+
   
       - name: Setup Git
         run: |
