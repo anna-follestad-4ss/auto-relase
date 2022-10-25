@@ -1,5 +1,10 @@
 Release Notes
 =============
+What is new in version X.Y.Z og Dato 2 
+------------------------------------------------
+ 
+ 
+annen text
 What is new in version X.Y.Z og Dato 1 
 ------------------------------------------------
 annen text
