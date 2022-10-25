@@ -1,6 +1,13 @@
 Release Notes
 =============
  
+What is new in version X.Y.Z og Dato 3
+------------------------------------------------
+ 
+annen text
+ 
+ 
+ 
 What is new in version X.Y.Z og Dato 2 
 ------------------------------------------------
  
