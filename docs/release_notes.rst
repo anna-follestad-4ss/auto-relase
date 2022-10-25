@@ -2,6 +2,7 @@ Release Notes
 =============
 What is new in version X.Y.Z og Dato 1 
 ------------------------------------------------
+annen text
 her er release notes for den aktuell releasen 
 <!-- Release notes generated using configuration in .github/release.yml at v0.1.49 -->
 
