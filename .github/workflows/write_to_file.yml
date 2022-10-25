@@ -47,11 +47,10 @@ jobs:
       - name: ubuntu text adder
         run: |
           cd docs
-          sed -i "3 r a " release_notes.rst
           sed -i '3 r new_notes.txt' release_notes.rst
-          sed -i "3 i b " release_notes.rst
+          sed -i "2 i b " release_notes.rst
           sed -i "3 i c " release_notes.rst
-          sed -i "3 i d " release_notes.rst
+          sed -i "3 i  " release_notes.rst
           sed -i "3 i e " release_notes.rst
           sed -i '3 i What is new in version X.Y.Z ' release_notes.rst
   
