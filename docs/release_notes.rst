@@ -1,10 +1,6 @@
 Release Notes
-b 
-What is new in version X.Y.Z 
-e 
- 
-c 
 =============
+
 What is new in version X.Y.Z 
 <!-- Release notes generated using configuration in .github/release.yml at v0.1.46 -->
 
