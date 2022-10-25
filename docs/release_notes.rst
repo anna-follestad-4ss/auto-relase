@@ -1,6 +1,16 @@
 Release Notes
 =============
+What is new in version X.Y.Z 
+e 
+d 
+c 
+b 
 What is new in version v0.1.46 (24 October 2022)
+<!-- Release notes generated using configuration in .github/release.yml at v0.1.46 -->
+
+
+
+**Full Changelog**: https://github.com/anna-follestad-4ss/auto-release/compare/v0.1.45...v0.1.46
 ------------------------------------------------
 n
 n 
