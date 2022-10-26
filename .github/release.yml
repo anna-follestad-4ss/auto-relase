@@ -1,16 +1,15 @@
 changelog:
   categories:
-  - title: Breaking Changes
+  - title: Breaking Changes 🛠
     labels:
     - breaking-change
-  - title: Features 
+  - title: Features 🎉
     labels:
     - feature
-    - coolstuff
-  - title: Bug fixes 
+    - documentation
+  - title: Bug Fixes
     labels:
     - bug
-    - fixit
   - title: Other Changes
     labels:
        - "*"
